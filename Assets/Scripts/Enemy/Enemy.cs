@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     public float currentSlowDownTime;
     public float slowDownTime;
     public float slowDownVariable;
+    public GameObject slowDownParticles;
 
 
     // Start is called before the first frame update
@@ -78,9 +79,11 @@ public class Enemy : MonoBehaviour
     {
         agent.speed = slowedDownSpeed;
         currentSlowDownTime = 0;
+        slowDownParticles.SetActive(true);
     }
      private void ResumeSpeed()
     {
         agent.speed = maxSpeed;
+        slowDownParticles.SetActive(false);
     }
 }
