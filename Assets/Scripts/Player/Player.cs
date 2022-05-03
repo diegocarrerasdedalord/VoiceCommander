@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     float gravedad;
@@ -21,16 +21,22 @@ public class Player : MonoBehaviour
     public float totalHP;
     public float currentHP;
 
+    Manager manager;
+
 
     public void Awake()
     {
         cc = GetComponent<CharacterController>();
+        manager = FindObjectOfType<Manager>();
 
     }
 
     public void Update()
     {
-
+        if (currentHP<=0)
+        {
+            Die();
+        }
         if (cc.isGrounded)
         {
             gravedad = 0;
@@ -69,7 +75,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-
+        SceneManager.LoadScene(manager.currentLevel);
     }
 }
 

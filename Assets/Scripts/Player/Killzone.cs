@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Killzone : MonoBehaviour
 {
+    public float damage; //esto deberia estar en powers y powers deberia llamarse otra cosa que tenga mas sentido con esa skill
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,7 @@ public class Killzone : MonoBehaviour
         if(other.tag=="Enemy")
         {
             Enemy enemy = other.GetComponent<Enemy>();
-            enemy.currentHP -= 1*Time.deltaTime;
-            Debug.Log("Hacer daño");
-            //enemy.Die();
+            enemy.currentHP -= damage*Time.deltaTime;
         }
     }
 }

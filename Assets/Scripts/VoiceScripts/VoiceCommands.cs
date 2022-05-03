@@ -15,11 +15,11 @@ public class VoiceCommands : MonoBehaviour
     void Start()
     {
         actions.Add("alakazam", SpawnAlly);
-        actions.Add("drakaris", SpitFire);
+        actions.Add("drakaris", SpitFire); //a veces se buggea, deberia agregar un try catch.
 
         keyWordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keyWordRecognizer.OnPhraseRecognized += RecognizedSpeech;
-        keyWordRecognizer.Start();
+        keyWordRecognizer.Start(); 
 
         powers = FindObjectOfType<Powers>();
        // keyWordRecognizer.Stop()//si queremos que se detenga

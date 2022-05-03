@@ -11,6 +11,7 @@ public class Powers : MonoBehaviour
     public float fireActiveTime=60;
     public float fireDuration;
 
+    
     public bool spitFireIsActive = false;
     // Start is called before the first frame update
     void Start()
@@ -50,4 +51,6 @@ public class Powers : MonoBehaviour
         fireParticles.SetActive(false);
         spitFireIsActive = false;
     }
+
+    
 }

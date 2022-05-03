@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         Player player = target.GetComponent<Player>(); //si quiero poner un segundo target esto deberia cambiar y deberia separar la vida del player a otro scrip
-        player.currentHP -= damage;
+        player.currentHP -= damage*Time.deltaTime;
         
     }
 
