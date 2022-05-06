@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     Powers power;
     public Text playerHPtext;
     public int currentLevel;
+    public List<Enemy> enemies = new List<Enemy>();
 
     public Text cooldownText;
     // Start is called before the first frame update
@@ -39,5 +40,14 @@ public class Manager : MonoBehaviour
         }
 
         return cooldown;
+    }
+
+    public void AddEnemy(Enemy enemy)
+    {
+        enemies.Add(enemy);
+    }
+    public void RemoveEnemy(Enemy enemy)
+    {
+        enemies.Remove(enemy);
     }
 }

@@ -963,12 +963,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &896738258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4534204056909628737, guid: f48218f9f17c75c47b1279969749f858,
-    type: 3}
-  m_PrefabInstance: {fileID: 1614893244}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &910700273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1071,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHPtext: {fileID: 71248255}
   currentLevel: 0
+  enemies: []
   cooldownText: {fileID: 582523115}
 --- !u!4 &938679397
 Transform:
@@ -1123,8 +1118,8 @@ MonoBehaviour:
   minScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 7, y: 3, z: 5}
   detector: {fileID: 1058067417}
-  loudnessSensibility: 50
-  threshhold: 0.1
+  loudnessSensibility: 15
+  threshhold: 0.01
 --- !u!65 &950459767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1857,9 +1852,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2840980681723240750, guid: 428700b29f283964b972d5811960796e,
         type: 3}
-      propertyPath: slowDownParticles
-      value: 
-      objectReference: {fileID: 896738258}
+      propertyPath: hearingRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2840980681723240751, guid: 428700b29f283964b972d5811960796e,
         type: 3}
       propertyPath: m_Name

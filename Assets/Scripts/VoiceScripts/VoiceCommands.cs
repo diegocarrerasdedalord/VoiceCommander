@@ -15,7 +15,7 @@ public class VoiceCommands : MonoBehaviour
     void Start()
     {
         actions.Add("alakazam", SpawnAlly);
-        actions.Add("drakaris", SpitFire); //a veces se buggea, deberia agregar un try catch.
+        actions.Add("ignis", SpitFire); //a veces se buggea, deberia agregar un try catch.
 
         keyWordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keyWordRecognizer.OnPhraseRecognized += RecognizedSpeech;

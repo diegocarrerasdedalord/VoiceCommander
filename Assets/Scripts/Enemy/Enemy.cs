@@ -22,6 +22,9 @@ public class Enemy : MonoBehaviour
     public float slowDownVariable;
     public GameObject slowDownParticles;
 
+    public Manager manager;
+    public float hearingRange;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,9 @@ public class Enemy : MonoBehaviour
         target = FindObjectOfType<Player>();
         maxSpeed = agent.speed;
         slowedDownSpeed = maxSpeed / slowDownVariable;
+        manager = FindObjectOfType<Manager>();
+        manager.AddEnemy(this);
+
     }
 
     // Update is called once per frame
@@ -72,6 +78,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        manager.RemoveEnemy(this);
         Destroy(this.gameObject);
     }
 
@@ -85,5 +92,10 @@ public class Enemy : MonoBehaviour
     {
         agent.speed = maxSpeed;
         slowDownParticles.SetActive(false);
+    }
+
+    public void EnterHuntMode() //Ideally the enemies would go to the players last known location but this solution is easier for the proto and gets a very similar result
+    {
+        lookRadius = lookRadius * 2;
     }
 }

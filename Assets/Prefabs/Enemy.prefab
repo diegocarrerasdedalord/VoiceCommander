@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  lookRadius: 15
+  lookRadius: 3
   attackRate: 3
   damage: 10
   distance: 0
@@ -147,6 +147,8 @@ MonoBehaviour:
   slowDownVariable: 5
   slowDownParticles: {fileID: 4534204056909628737, guid: f48218f9f17c75c47b1279969749f858,
     type: 3}
+  manager: {fileID: 0}
+  hearingRange: 7
 --- !u!54 &1768673866956176288
 Rigidbody:
   m_ObjectHideFlags: 0
