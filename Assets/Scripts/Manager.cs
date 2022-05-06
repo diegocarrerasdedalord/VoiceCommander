@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -28,6 +29,24 @@ public class Manager : MonoBehaviour
 
         cooldownText.text = "Cooldown: "+CalculateCooldown(power.fireActiveTime).ToString();
 
+        //cheats to skip levels
+        if (Input.GetKeyDown("1"))
+        {
+            SceneManager.LoadScene(0);
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            SceneManager.LoadScene(2);
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            SceneManager.LoadScene(3);
+        }
+
 
     }
 
@@ -50,4 +69,5 @@ public class Manager : MonoBehaviour
     {
         enemies.Remove(enemy);
     }
+
 }
