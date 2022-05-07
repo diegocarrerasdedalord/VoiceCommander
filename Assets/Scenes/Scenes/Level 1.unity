@@ -898,7 +898,7 @@ MonoBehaviour:
   playerSpeedGround: 4
   gravityForce: 9.8
   jumpForce: 4
-  maxJumps: 1
+  maxJumps: 0
   mouseSensitivity: 5
   totalHP: 100
   currentHP: 100

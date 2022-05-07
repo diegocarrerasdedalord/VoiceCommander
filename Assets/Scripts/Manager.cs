@@ -80,10 +80,7 @@ public class Manager : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        if(currentLevel!=4)
-        {
             SceneManager.LoadScene(currentLevel + 1);
-        }
     }
 
 }
