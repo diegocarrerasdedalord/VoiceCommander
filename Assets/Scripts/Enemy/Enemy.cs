@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
     private void MoveTowardsTarget()
     {
         agent.SetDestination(target.transform.position);
+        EnterHuntMode();
     }
     private void Attack()
     {
@@ -97,5 +98,11 @@ public class Enemy : MonoBehaviour
     public void EnterHuntMode() //Ideally the enemies would go to the players last known location but this solution is easier for the proto and gets a very similar result
     {
         lookRadius = lookRadius * 2;
+        ChangeMaterialColor();
+    }
+    public void ChangeMaterialColor()
+    {
+        var cubeRenderer = this.GetComponent<Renderer>();
+        cubeRenderer.material.SetColor("_Color", Color.red);
     }
 }

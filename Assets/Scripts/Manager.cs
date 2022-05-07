@@ -69,5 +69,12 @@ public class Manager : MonoBehaviour
     {
         enemies.Remove(enemy);
     }
+    public void LoadNextLevel()
+    {
+        if(currentLevel!=4)
+        {
+            SceneManager.LoadScene(currentLevel + 1);
+        }
+    }
 
 }

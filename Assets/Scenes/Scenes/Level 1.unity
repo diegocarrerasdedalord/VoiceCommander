@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeedAir: 6
-  playerSpeedGround: 7
+  playerSpeedGround: 5
   gravityForce: 9.8
   jumpForce: 4
   maxJumps: 1
@@ -1847,8 +1847,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2840980681723240745, guid: 428700b29f283964b972d5811960796e,
         type: 3}
+      propertyPath: m_Speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840980681723240745, guid: 428700b29f283964b972d5811960796e,
+        type: 3}
       propertyPath: m_StoppingDistance
       value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840980681723240750, guid: 428700b29f283964b972d5811960796e,
+        type: 3}
+      propertyPath: lookRadius
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2840980681723240750, guid: 428700b29f283964b972d5811960796e,
         type: 3}

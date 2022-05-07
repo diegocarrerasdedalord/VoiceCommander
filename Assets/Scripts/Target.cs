@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    private Manager manager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        manager = FindObjectOfType<Manager>();
     }
 
     // Update is called once per frame
@@ -20,8 +21,7 @@ public class Target : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //Ganaste el nivel
-            Debug.Log("Level Won");
+            manager.LoadNextLevel();
         }
     }
 }
