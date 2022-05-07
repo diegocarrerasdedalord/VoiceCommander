@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
         manager.AddEnemy(this);
         baseLookRadius = lookRadius;
 
+
     }
 
     // Update is called once per frame
@@ -100,6 +101,7 @@ public class Enemy : MonoBehaviour
         agent.speed = slowedDownSpeed;
         currentSlowDownTime = 0;
         slowDownParticles.SetActive(true);
+        Debug.Log("particulasActivadas");
     }
      private void ResumeSpeed()
     {
