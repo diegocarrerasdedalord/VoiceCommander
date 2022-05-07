@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour
     public Manager manager;
     public float hearingRange;
 
+    private float baseLookRadius;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
         slowedDownSpeed = maxSpeed / slowDownVariable;
         manager = FindObjectOfType<Manager>();
         manager.AddEnemy(this);
+        baseLookRadius = lookRadius;
 
     }
 
@@ -62,6 +65,15 @@ public class Enemy : MonoBehaviour
         if(currentSlowDownTime>slowDownTime)
         {
             ResumeSpeed();
+        }
+
+        if(distance>hearingRange)
+        {
+            LeaveHuntMode();
+        }
+        else
+        {
+        
         }
     }
 
@@ -97,12 +109,28 @@ public class Enemy : MonoBehaviour
 
     public void EnterHuntMode() //Ideally the enemies would go to the players last known location but this solution is easier for the proto and gets a very similar result
     {
-        lookRadius = lookRadius * 2;
-        ChangeMaterialColor();
+        lookRadius = hearingRange;
+        ChangeMaterialColor("red");
+        agent.isStopped = false;
     }
-    public void ChangeMaterialColor()
+
+    public void LeaveHuntMode()
+    {
+        lookRadius = baseLookRadius;
+        ChangeMaterialColor("yellow");
+        agent.isStopped = true;
+    }
+    public void ChangeMaterialColor(string color)
     {
         var cubeRenderer = this.GetComponent<Renderer>();
-        cubeRenderer.material.SetColor("_Color", Color.red);
+        if (color=="red")
+        {
+            cubeRenderer.material.SetColor("_Color", Color.red);
+        }
+        if (color == "yellow")
+        {
+            cubeRenderer.material.SetColor("_Color", Color.yellow);
+        }
+
     }
 }
