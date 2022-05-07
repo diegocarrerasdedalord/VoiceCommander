@@ -54,6 +54,10 @@ public class Manager : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        if (Input.GetKeyDown("5"))
+        {
+            SceneManager.LoadScene(4);
+        }
 
 
     }
