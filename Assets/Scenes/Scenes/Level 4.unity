@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHPtext: {fileID: 71248255}
-  currentLevel: 0
+  currentLevel: 3
   enemies: []
   cooldownText: {fileID: 582523115}
 --- !u!4 &938679397
