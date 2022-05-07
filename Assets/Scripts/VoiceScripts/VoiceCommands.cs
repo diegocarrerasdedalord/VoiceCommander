@@ -14,7 +14,7 @@ public class VoiceCommands : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        actions.Add("alakazam", SpawnAlly);
+        //actions.Add("alakazam", SpawnAlly);
         actions.Add("scorch", SpitFire); //a veces se buggea, deberia agregar un try catch.
 
         keyWordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
@@ -33,7 +33,7 @@ public class VoiceCommands : MonoBehaviour
     }
     private void SpawnAlly() //podria hacer que sea un teleport a una zona cercana tambien tipo foreach torre cercana spawnear en la mas cercana
     {
-        transform.Translate(1, 0, 0);
+       
     }
     private void SpitFire()
     {

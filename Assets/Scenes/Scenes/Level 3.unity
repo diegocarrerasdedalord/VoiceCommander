@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35af0ed4d814dc8469a121a24593e93b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 8
 --- !u!1 &322407541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,9 +1070,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireKillZone: {fileID: 243920953}
   fireParticles: {fileID: 1367735941}
-  fireCooldown: 30
-  fireActiveTime: 30
-  fireDuration: 5
+  fireCooldown: 10
+  fireActiveTime: 10
+  fireDuration: 3
   spitFireIsActive: 0
 --- !u!114 &451768372
 MonoBehaviour:
