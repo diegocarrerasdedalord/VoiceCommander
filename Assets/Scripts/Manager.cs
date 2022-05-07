@@ -13,6 +13,8 @@ public class Manager : MonoBehaviour
     public List<Enemy> enemies = new List<Enemy>();
 
     public Text cooldownText;
+
+    public Text manaText;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,12 @@ public class Manager : MonoBehaviour
         playerHPtext.text = roundedHP.ToString();
 
         cooldownText.text = "Cooldown: "+CalculateCooldown(power.fireActiveTime).ToString();
+
+        if(manaText!=null)
+        {
+            manaText.text = "Mana: " + power.currentMana.ToString();
+        }
+        
 
         //cheats to skip levels
         if (Input.GetKeyDown("1"))

@@ -10,13 +10,17 @@ public class Powers : MonoBehaviour
     public float fireCooldown;
     public float fireActiveTime;
     public float fireDuration;
+    
+    public float maxMana;
+    public float currentMana;
+    public float manaCost;
 
     
     public bool spitFireIsActive = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentMana = maxMana;
     }
 
     // Update is called once per frame
@@ -36,12 +40,13 @@ public class Powers : MonoBehaviour
 
     public void SpitFire()
     {
-        if (fireActiveTime>fireCooldown)
+        if (fireActiveTime>fireCooldown&& manaCost<=currentMana)
         {
             fireActiveTime = 0;
             fireKillZone.SetActive(true);
             fireParticles.SetActive(true);
             spitFireIsActive = true;
+            currentMana -= manaCost;
         }
     }
 
