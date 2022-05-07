@@ -8,7 +8,7 @@ public class Powers : MonoBehaviour
     public GameObject fireKillZone;
     public GameObject fireParticles;
     public float fireCooldown;
-    public float fireActiveTime=60;
+    public float fireActiveTime;
     public float fireDuration;
 
     

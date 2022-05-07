@@ -52,7 +52,8 @@ public class Manager : MonoBehaviour
 
     public int CalculateCooldown(float fireActiveTime)
     {
-        int cooldown = 30-((int)Mathf.Round(fireActiveTime));
+        int cd = Mathf.RoundToInt(power.fireCooldown);
+        int cooldown = cd-((int)Mathf.Round(fireActiveTime));
         if (cooldown <=0)
         {
             return 0;

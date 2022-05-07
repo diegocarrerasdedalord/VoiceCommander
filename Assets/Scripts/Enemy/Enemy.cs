@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     public float slowedDownSpeed;
     public float currentSlowDownTime;
     public float slowDownTime;
-    public float slowDownVariable;
     public GameObject slowDownParticles;
 
     public Manager manager;
@@ -34,7 +33,6 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         target = FindObjectOfType<Player>();
         maxSpeed = agent.speed;
-        slowedDownSpeed = maxSpeed / slowDownVariable;
         manager = FindObjectOfType<Manager>();
         manager.AddEnemy(this);
         baseLookRadius = lookRadius;
