@@ -27,7 +27,7 @@ public class Manager : MonoBehaviour
     void Update()
     {
         int roundedHP = (int)Mathf.Round(player.currentHP);
-        playerHPtext.text = roundedHP.ToString();
+        playerHPtext.text = "HP: "+ roundedHP.ToString();
 
         cooldownText.text = "Cooldown: "+CalculateCooldown(power.fireActiveTime).ToString();
 
